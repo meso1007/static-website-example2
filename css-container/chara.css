@@ -42,6 +42,7 @@ header {
 }
 
 .icon-animate img {
+    position: fixed;
     max-width: 5rem;
 }
 
