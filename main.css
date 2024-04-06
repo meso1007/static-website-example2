@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --animation-duration: 2s;
+}
+
+html {
+    font-family: Helvetica, sans-serif;
+    --primary-color: #008080;
+    --secondary-color: black;
+    --contrast-color: #ffffff;
+    --third-color: gray;
+    font-size: 16px;
+}
+
+/* header nav layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--third-color);
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.slanted-text {
+    transform: rotate(1deg); 
+    display: inline-block; 
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quick-logo {
+    padding-top: 200px;
+}
+  
+
+.header-logo h2 {
+    border: 4px solid var(--primary-color);
+}
+
+.icon-animate img {
+    max-width: 5rem;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    font-size: 1.2rem;
+    
+}
+
+header li a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+header li a:hover {
+    text-decoration: underline;
+}
+
+
+@keyframes jumpThenSlide {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-30px); }
+    50% { transform: translateY(0); }
+    60% { transform: translateX(0); }
+    80% { transform: translateX(-100vw); }
+    100% { transform: translateY(calc(100dvh - 60px)) translateX(calc(50vw + 30px)); }
+    }
+
+  .icon-animate {
+    animation: jumpThenSlide 2s ease forwards;
+    z-index: 2;
+  }
+
+@keyframes Slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-70px); }
+  }
+
+  .header-logo {
+    animation: Slide 8s ease forwards;
+    z-index: 2;
+  }
+
+#checkbox:checked ~ .quick-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#checkbox {
+    display: none;
+}
+
+#checkbox-label {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url('./Assets/logo/menu.png');
+    background-size: cover;
+    z-index: 2;
+}
+
+.quick-logo {
+    display: none;
+}
+
+/* main layout */
+section {
+    margin-bottom: 3rem;
+}
+/* section1 */
+
+.section1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.overlay-group {
+    max-width: 49%;
+    position: relative;
+}
+.overlay-group img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.text-overlay {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 90%;
+    left: 1rem;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.text-overlay a {
+    text-decoration: none;
+    color: var(--contrast-color);
+}
+
+/* section2 */
+.section2 {
+    margin: 0 5rem;
+    text-align: center;
+}
+
+#itemname {
+    font-size: 2rem;
+}
+
+.item-box p {
+    text-align: left;
+}
+
+.item-container {
+    display: flex;
+    overflow-x: scroll;
+    gap: 0.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.item-box img {
+    flex: 0 0 auto;
+    max-width: 20rem;
+    height: 70%;
+}
+
+.item-box h5 {
+    font-size: 1.1rem;
+}
+
+.item-box p {
+    font-size: 0.8rem;
+}
+
+.item-box a{
+    text-decoration: underline;
+    color: var(--tricky-color);
+}
+
+
+.item-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section2 button {
+    padding: 1rem 3rem;
+    color: var(--contrast-color);
+    background-color: var(--secondary-color);
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+}
+
+
+/* footer layout */
+footer {
+    background-color: var(--primary-color);
+    padding: 3rem 0;
+    margin: 0;
+    font-size: 0.7rem;
+}
+
+footer a{
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.quick-logo img,
+footer img {
+    max-width: 2rem;
+}
+
+/* media query mobile size */
+@media screen and (max-width: 600px) {
+
+    header h2 {
+        font-size: 1rem;
+    }
+
+    @keyframes jumpThenSlide {
+        0% { transform: translateY(0); }
+        25% { transform: translateY(-30px); }
+        50% { transform: translateY(0); }
+        60% { transform: translateX(0); }
+        80% { transform: translateX(-100vw); }
+        100% { transform: translateY(calc(100dvh + 300px)) translateX(calc(100vw - 100px)); }
+        }
+    
+      .icon-animate {
+        animation: jumpThenSlide 2s ease forwards;
+        z-index: 2;
+      }
+    
+    .photo-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    
+    .overlay-group {
+        max-width: 100%;
+    }
+
+    .text-overlay {
+        font-size: 1rem;
+    }
+
+   .none {
+        display: none;
+    }
+}
