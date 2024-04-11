@@ -17,6 +17,7 @@ html {
     --section-bg-color: rgb(227, 253, 202);
     --contrast-color: #ffffff;
     --third-color: gray;
+    --forth-color: rgb(47, 47, 255);
     font-size: 16px;
 }
 /* header nav layout */
@@ -183,7 +184,7 @@ main summary {
 }
 
 .introducing a {
-    color: var(--third-color);
+    color: var(--forth-color);
 }
 
 .decoration {
