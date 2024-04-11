@@ -14,7 +14,7 @@ html {
     font-family: Helvetica, sans-serif;
     --primary-color: #008080;
     --secondary-color: black;
-    --third-color: rgb(47, 47, 255);
+    --forth-color: rgb(47, 47, 255);
     --contrast-color: #ffffff;
     --third-color: gray;
     font-size: 16px;
@@ -108,7 +108,7 @@ header li a:hover {
     display: inline-block;
     width: 30px;
     height: 30px;
-    background-image: url('../Assets/logo/menu.png');
+    background-image: url('../Assets/logo/menu.webp');
     background-size: cover;
     z-index: 2;
 }
@@ -167,6 +167,9 @@ form {
 
 #dropdowns:has(#owner:checked) #reason-owner-select {
     display: block;
+}
+.form-group button {
+    background-color: var(--forth-color);
 }
 
 

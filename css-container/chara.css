@@ -82,7 +82,7 @@ header li a:hover {
     display: inline-block;
     width: 30px;
     height: 30px;
-    background-image: url('../Assets/logo/menu.png');
+    background-image: url('../Assets/logo/menu.webp');
     background-size: cover;
     z-index: 2;
 }
