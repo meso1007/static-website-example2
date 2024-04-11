@@ -125,6 +125,8 @@ main p {
 
 main img {
     width: 15rem;
+    height: auto;
+    
     float: right;
 }
 
