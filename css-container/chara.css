@@ -16,6 +16,7 @@ html {
     --secondary-color: black;
     --contrast-color: #ffffff;
     --third-color: gray;
+    --hilight-color: #FFD700;
     --gradient-color: linear-gradient(to right, red, white);
     font-size: 16px;
 }
@@ -61,7 +62,7 @@ header li a {
 }
 
 header li a:hover {
-    color: #FFD700;
+    color: var(--hilight-color);
     text-decoration: underline;
 }
 
@@ -114,7 +115,7 @@ main h2 {
 }
 
 .main-text {
-    color: #FFD700;
+    color: var(--hilight-color);
 }
 
 main p {
